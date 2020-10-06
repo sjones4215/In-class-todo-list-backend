@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_06_182537) do
+ActiveRecord::Schema.define(version: 2020_10_06_190145) do
 
   create_table "cards", force: :cascade do |t|
     t.string "body"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_182537) do
     t.string "token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "nickname"
   end
 
   add_foreign_key "cards", "lists"

@@ -25,3 +25,4 @@ class UsersService
     def self.logout(user)
         user.update(token: nil)
     end
+end
