@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :update, :destroy]
+  skip_before_action :authenticate, only: [:index, :show]
 
   # GET /lists
   def index
