@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    validates :email, uniqueness: true
     has_many :lists, dependent: :destroy
     has_secure_password
 
