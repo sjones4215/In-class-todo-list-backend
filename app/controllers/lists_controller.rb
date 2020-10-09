@@ -3,8 +3,7 @@ class ListsController < ApplicationController
   
   # GET /lists
   def index
-    @lists = List.all
-
+    @lists =  List.where(user_id: @current_user.id)
     render json: @lists
   end
 
