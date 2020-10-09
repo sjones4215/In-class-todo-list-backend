@@ -4,7 +4,7 @@ class ListsController < ApplicationController
   # GET /lists
   def index
     @lists =  List.where(user_id: @current_user.id)
-    render json: @lists
+    render json: { lists: @lists }
   end
 
   # GET /lists/1
