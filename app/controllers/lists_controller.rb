@@ -9,7 +9,8 @@ class ListsController < ApplicationController
 
   # GET /lists/1
   def show
-    render json: { list: @list }
+    @cards = Card.where(list_id: :params[:id])
+    render json: { list: @list, card: @cards }
   end
 
   # POST /lists
